@@ -1,4 +1,4 @@
-When I couldn't find good code for the storage and management of outfits on TinyMUSH, I decided to whip something up for myself, but ended up sharing it with my community, as it was versitile and useful for those in the community who changed outfits depending on the scene, weather, state of undress, and so on.
+When I couldn't find good code for the storage and management of outfits on TinyMUSH, I decided to whip something up for myself, but ended up sharing it with my community, as it was versatile and useful for those in the community who changed outfits depending on the scene, weather, state of undress, and so on.
 
 Outfit names can have spaces in them, making more organic naming possible. It can be used locally by an individual by simply copying the CMD lines and storing them on the character, rather than on an object dropped in the Master  Room. God must be used to add the commands to the game globally, but other than that it shouldn't need any sort of special permission.
 
