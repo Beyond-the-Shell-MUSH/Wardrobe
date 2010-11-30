@@ -1,0 +1,13 @@
+Wardrobe is a simple global functionality that allows players to store various
+outfits for easy switching during role playing sessions. The code does allow
+outfits to have spaces in the name, which allows players to have more organic
+outfit names. A list command makes it easier to find the outfit you are looking
+for, as well as being easy to remove old, unneeded outfits.
+
++desc <desc> ................ Stores or updates the base physical description.
++wear <name> ...................................... Wears the selected outfit.
++outfit/list ............................. Lists all currently stored outfits.
++knot <name> ............ Wears the selected outfit with the stored rank knot.
++outfit <name>=<desc> ........... Adds a new outfit with name and description.
++outfit/del <name> ......... Deletes the selected outfit without confirmation.
++outfit/view <name> ...................... View a stored outfit's description.

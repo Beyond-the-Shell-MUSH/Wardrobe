@@ -1,0 +1,27 @@
+@create Wardrobe=10
+@@ Create the object
+&CMD-BASE_DESC Wardrobe=$+desc *:&BASE_DESC %#=%0
+@@ Command for setting the base physical display.
+&CMD-WEAR Wardrobe=$+wear *:@desc me=%T[u(BASE_DESC)]%R%T[u(OUTFIT-[edit(%0,%b,_)])]
+@@ Command for wearing an outfit.
+&CMD-KNOT Wardrobe=$+knot *:@desc me=%T[u(BASE_DESC)]%R%T[u(OUTFIT-[edit(%0,%b,_)])]%R%R[v(OUTFIT-KNOT)]
+@@ Command for wearing a selected outfit with a rank knot.
+&CMD-ADD_OUTFIT Wardrobe=$+outfit *=*:&OUTFIT-[edit(%0,%b,_)] %#=%1;&LIST-OUTFIT %#=[v(LIST-OUTFIT)]|%0
+@@ Command for adding an outfit.
+&CMD-LIST_OUTFIT Wardrobe=$+outfit/list:@pemit %#=You have the following outfits stored:%R[edit(u(LIST-OUTFIT),|,[space(5)])]
+@@ Command for viewing stored outfits.
+&CMD-VIEW_OUTFIT Wardrobe=$+outfit/view *:@pemit %#=Your outfit, %0, has the following description:%R[space(5)][u(OUTFIT-[edit(%0,%b,_)])]
+@@ Command for viewing a stored outfit.
+&CMD-RM_OUTFIT Wardrobe=$+outfit/del *:&OUTFIT-[edit(%0,%b,_)] %#=;&LIST-OUTFIT %#=[remove(v(LIST-OUTFIT),%0,|)]
+@@ Command for removing an outfit.
+@Desc Wardrobe=Functions for wearing and storing outfits.
+@set Wardrobe=COMMANDS
+
+@@ To add the commands globally instead of locally. Must be God.
+@addcommand/preserve +desc=Wardrobe/CMD-BASE_DESC
+@addcommand/preserve +wear=Wardrobe/CMD-WEAR
+@addcommand/preserve +knot=Wardrobe/CMD-KNOT
+@addcommand/preserve +outfit=Wardrobe/CMD-ADD_OUTFIT
+@addcommand/preserve +outfit=Wardrobe/CMD-LIST_OUTFIT
+@addcommand/preserve +outfit=Wardrobe/CMD-VIEW_OUTFIT
+@addcommand/preserve +outfit=Wardrobe/CMD-RM_OUTFIT
